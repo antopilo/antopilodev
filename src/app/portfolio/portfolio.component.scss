@@ -1,0 +1,59 @@
+.item
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 200px;
+    margin-bottom: 32px;
+}
+
+.item-left
+{
+    width:48%;
+    height:100%;
+}
+
+.item-right
+{
+    
+    height:100%;
+    aspect-ratio: 16 / 9;
+
+    img {
+        height:100%;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+.nuake-img
+{
+    background-image: url("/assets/NUAKE.png");
+}
+
+@media (max-width:500px) {
+    .body-wrapper
+    {
+        margin: 0;
+    }
+    .spacer
+    {
+        width: 0;
+    }
+    .sidebar
+    {
+        opacity: 0;
+        width:0;
+        margin:0;
+        padding: 0;
+    }
+    
+
+    .item {
+        height: 100%;
+        width: 100%;
+    }
+
+    .item-left {
+        width: 75%;
+    }
+}

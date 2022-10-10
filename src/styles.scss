@@ -1,0 +1,237 @@
+/* You can add global styles to this file, and also import other style files */
+
+$base-color: #222222;
+$light-color: #2B2B2B;
+$light-text: #8E8E8E;
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Open+Sans:400italic,700italic,400,700);
+
+$content-width: 950px;
+$side-width: 280px;
+.sidebar2
+{
+    width: 0;
+    overflow: hidden;
+    height: 0;
+}
+body, html 
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto mono';
+    background-color: $base-color;
+}
+
+.body-wrapper
+{
+    background-color: $base-color;
+    height: 100vh;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.spacer
+{
+    width: $side-width;
+}
+
+.sidebar
+{
+    border-color: black;
+    border-width: 2px;
+    width: $side-width;
+    position: sticky;
+    align-self: flex-start;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+    .active
+    {
+        color:aqua;
+    }
+
+    h1 
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+        color: white;
+        font-size: 22px;
+    }
+
+    p 
+    {
+        margin-top:8px;
+        margin-bottom:8px;
+        color: $light-text;
+        font-size: 16px;
+    }
+
+    a 
+    {
+        text-decoration: underline;
+    }
+
+    padding: 16px;
+    margin-top: 32px;
+}
+
+.content 
+{
+    width: $content-width;
+    min-height: 800px;
+    padding: 64px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    overflow-x: hidden;
+    background-color: $light-color;
+    flex-basis: 10;
+    
+    p {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+}
+
+.light-text
+{
+    color: $light-text;
+    p 
+    {
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+}
+
+// scrollbar
+::-webkit-scrollbar {
+    width: 12px;    
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #181818; 
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #151515;  
+}
+
+
+a 
+{
+    color:$light-text;
+}
+@media (max-width:1300px) {
+    .spacer{
+        width: 0;
+    }
+}
+@media (max-width:900px) {
+    .body-wrapper
+    {
+        margin: 0;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+    .spacer
+    {
+        width: 0;
+    }
+    .sidebar
+    {
+        opacity: 0;
+        width:0;
+        margin:0;
+        padding: 0;
+        height: 0;
+        p {
+            height: 0;
+        }
+        h1 {
+            height: 0;
+        }
+    }
+    .spacer{
+        height: 0;
+    }
+    .sidebar2
+    {
+        margin-left: 16px;;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+            
+        width: 100%;
+        overflow:visible;
+        height: 30px;
+    }
+    .content-wrapper
+    {
+        margin-top: 0px;
+        height: 90%;
+    }
+    .content {
+        width: 100%;
+        margin: 0;
+        padding: 16px;
+        .item-right {
+            width: 0;
+            
+        }
+
+        .item {
+            height: 100%;
+        }
+    }
+}
+
+
+.post
+{
+    line-height: 28px;
+
+    h1 {
+        display: inline-block;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        color: white !important;
+    }
+
+    h2 {
+        display: inline-block;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        color: white !important;
+    }
+    
+    p {
+        padding: 0;
+        margin: 10px 0 30px 0;
+        color: #c8c8c8 !important;
+        color: green;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    p:has(+ img)  {
+        color: red !important;
+    }
+
+    video {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,35 @@
+<div class="body-wrapper">
+  <div class="sidebar">
+    <h1>ANTOINE PILOTE</h1>
+    <p>SOFTWARE DEVELOPER</p>
+    <p><a href="https://momentfactory.com/home">@MOMENTFACTORY</a></p>
+    <p>============================</p>
+    <p><a routerLink="/home" ariaCurrentWhenActive="page" routerLinkActive="active" >HOME</a><p>
+    <p><a routerLink="/portfolio" ariaCurrentWhenActive="page" routerLinkActive="active" >PORTFOLIO</a></p>
+    <p><a routerLink="/blog" ariaCurrentWhenActive="page" routerLinkActive="active" >BLOG</a></p>
+    <p><a routerLink="/contact" ariaCurrentWhenActive="page" routerLinkActive="active" >CONTACT</a></p>
+    <p>============================</p>
+    <p>RECENT BLOG POSTS</p>
+    <p><a routerLink="/blog/first-entry.md" ariaCurrentWhenActive="page" routerLinkActive="active">HELLO BLOG!</a></p>
+    <p>...</p>
+  </div>
+
+  <div class="sidebar2">
+    <p><a routerLink="/home" ariaCurrentWhenActive="page" routerLinkActive="active" >HOME  </a> <p>
+      <p>&nbsp; / &nbsp;</p>
+    <p><a routerLink="/portfolio" ariaCurrentWhenActive="page" routerLinkActive="active" >PORTFOLIO  </a> </p>
+    <p>&nbsp; / &nbsp;</p>
+    <p><a routerLink="/blog" ariaCurrentWhenActive="page" routerLinkActive="active" >BLOG</a> </p>
+    <p>&nbsp; / &nbsp;</p>
+    <p><a routerLink="/contact" ariaCurrentWhenActive="page" routerLinkActive="active" >CONTACT</a> </p>
+  </div>
+  <div class="content-wrapper">
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="spacer">
+    <!-- Nothing here :) -->
+  </div>
+</div>
+
