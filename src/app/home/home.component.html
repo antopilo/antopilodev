@@ -20,8 +20,9 @@
 <b><p>RECENT BLOG POSTS</p>
 <p>======================</p></b>
 <div class="light-text">
-    <p><a routerLink="/blog/first-entry.md" ariaCurrentWhenActive="page" routerLinkActive="active">HELLO BLOG!</a></p>
-    <p>...</p>
+
+    <p *ngFor="let post of posts"><a  routerLink="/blog/{{post.file}}">[{{post.date}}] - {{post.name}}</a></p>
+
 </div>
 <br>
 <br>

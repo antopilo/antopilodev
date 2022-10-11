@@ -10,8 +10,7 @@
     <p><a routerLink="/contact" ariaCurrentWhenActive="page" routerLinkActive="active" >CONTACT</a></p>
     <p>============================</p>
     <p>RECENT BLOG POSTS</p>
-    <p><a routerLink="/blog/first-entry.md" ariaCurrentWhenActive="page" routerLinkActive="active">HELLO BLOG!</a></p>
-    <p>...</p>
+    <p *ngFor="let post of posts"><a href="blog/{{post.file}}"  ariaCurrentWhenActive="page" routerLinkActive="active">{{post.name}}</a></p>
   </div>
 
   <div class="sidebar2">

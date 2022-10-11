@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { NgModule, SecurityContext } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -26,7 +27,8 @@ import { BlogArticleComponent } from './blog-article/blog-article.component';
     AppRoutingModule,
     MarkdownModule,
     HttpClientModule,
-    MarkdownModule.forRoot({ loader: HttpClient }),
+    MarkdownModule.forRoot({ loader: HttpClient,
+    sanitize: SecurityContext.NONE }),
   ],
   providers: [],
   bootstrap: [AppComponent]

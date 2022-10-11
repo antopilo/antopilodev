@@ -1,6 +1,9 @@
 <b><p>Blog articles</p>
 <p>==================</p></b>
 <br>
-<a routerLink="/blog/first-entry.md">[2022-10-10] - Hello Blog!</a>
+
+
+<p *ngFor="let post of posts"><a  routerLink="/blog/{{post.file}}">[{{post.date}}] - {{post.name}}</a></p>
+
 
 

@@ -235,3 +235,11 @@ a
     }
 }
 
+
+.youtube-embed {
+    --container-width: 720px;
+    --ratio: calc(16 / 9); /* 1.77 */
+    width: 100%;
+    height: calc(var(--container-width) / var(--ratio));
+  }
+
